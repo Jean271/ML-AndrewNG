@@ -16,9 +16,8 @@ for iter = 1:num_iters
     % Hint: While debugging, it can be useful to print out the values
     %       of the cost function (computeCost) and gradient here.
     %
-
-
-
+    h_test = X*theta-y;
+    theta = theta - 0.02*1/(2*m)*[sum(diag(h_test*X(:,1)')),sum(diag(h_test*X(:,2)'))]';
 
 
 
